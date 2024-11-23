@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECEN Project - CIFAR-10 Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Image Classification on CIFAR-10</h1>
+        </div>
+    </header>
+
+    <div class="frame">
+        <div class="sky">
+            <div class="plane">
+                <img src="plane.png" alt="Plane">
+            </div>
+            <div class="highway"></div>
+            <div class="city"></div>
+            <div class="car">
+                <img src="car.png" alt="Car">
+                <div class="wheel back-wheel">
+                    <img src="wheel.png" alt="Back Wheel">
+                </div>
+                <div class="wheel front-wheel">
+                    <img src="wheel.png" alt="Front Wheel">
+                </div>
+            </div>
+            <div class="truck">
+                <img src="truck.png" alt="Truck">
+            </div>
+        </div>
+    </div>
+
+    <main class="scroll-container">
+        <section class="intro">
+    
+        </section>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Image Classification on CIFAR-10</title>
+        </head>
+        <body>
+        
+            <section id="project-summary" class="content-section">
+                <h2>Project Summary</h2>
+                <p>
+                    This study explores the classification of images for the CIFAR-10 dataset with 10 classes (50,000 training and 10,000 test images).
+                    We compare three approaches: a Convolutional Neural Network (CNN), ResNet-18 with a Support Vector Machine (SVM) classifier, and ResNet-34. 
+                    The study’s goal is to assess these models’ classification accuracy, training efficiency, and generalization ability. The CNN model achieved 75% accuracy, 
+                    ResNet-18 + SVM achieved 85%, and ResNet-34 reached 95%. This helps further in constructing robust image recognition models.
+                </p>
+            </section>
+        
+            <section id="dataset-overview" class="content-section">
+                <h2>Dataset Overview</h2>
+                <p>
+                    CIFAR-10 is an established multi-class computer-vision dataset used for object recognition. It consists of 60,000 32x32 color images in 10 classes,
+                    with 6,000 images per class. The dataset includes 50,000 training images and 10,000 test images. The dataset contains 10 mutually exclusive classes: 
+                    Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, and Truck. These images were collected using search engines such as Google and Flickr.
+                </p>
+                <img src="cifar10-sample.png" alt="Sample CIFAR-10 Images">
+            </section>
+        
+            <section id="methodology" class="content-section">
+                <h2>Methodology</h2>
+                <ul>
+                    <li><strong>Data Preprocessing:</strong> The images were resized to 32x32 pixels. Transformations such as random rotations, horizontal flips, color jittering, sharpness adjustments, and random erasing were applied to the training data to improve model generalization.</li>
+                    <li><strong>Model Architecture:</strong> Three models were tested:
+                        <ul>
+                            <li><strong>CNN:</strong> A simple convolutional neural network with two convolutional layers and one fully connected layer.</li>
+                            <li><strong>ResNet-18 + SVM:</strong> ResNet-18 was used for feature extraction, and SVM was applied for classification with an RBF kernel.</li>
+                            <li><strong>ResNet-34:</strong> A deeper version of ResNet designed to mitigate vanishing gradients and improve model performance on deeper architectures.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Evaluation Metrics:</strong> Accuracy, precision, recall, F1 score, and confusion matrix were used to evaluate the performance of the models.</li>
+                </ul>
+            </section>
+        
+            <section id="results" class="content-section">
+                <h2>Results</h2>
+                <p>The models were evaluated using the following metrics:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CNN</td>
+                            <td>75%</td>
+                            <td>72%</td>
+                            <td>73%</td>
+                            <td>72.5%</td>
+                        </tr>
+                        <tr>
+                            <td>ResNet-18 + SVM</td>
+                            <td>86%</td>
+                            <td>83%</td>
+                            <td>84%</td>
+                            <td>83.5%</td>
+                        </tr>
+                        <tr>
+                            <td>ResNet-34</td>
+                            <td>95%</td>
+                            <td>94%</td>
+                            <td>95%</td>
+                            <td>94.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    The ResNet-34 model achieved the highest accuracy of 95%, demonstrating the benefits of deeper networks in mitigating vanishing gradients and enhancing 
+                    classification performance. ResNet-18 with SVM also showed substantial improvement over the baseline CNN, achieving 85% accuracy.
+                </p>
+            </section>
+        
+            <section id="conclusion" class="content-section">
+                <h2>Conclusion</h2>
+                <p>
+                    This study shows that deeper networks like ResNet-34 significantly improve classification accuracy on the CIFAR-10 dataset. While CNN and ResNet-18 
+                    with SVM provide strong results, ResNet-34 demonstrates the highest performance due to its ability to address the vanishing gradient problem and better 
+                    handle deep architectures. Future work could explore more complex datasets, and incorporate advanced architectures like Vision Transformers for even 
+                    better performance.
+                </p>
+            </section>
+        
+        <section id="code-link" class="content-section">
+            <h2>Code and Resources</h2>
+            <p>
+                Access the code and additional resources for this project on Google Colab: 
+                <a href="https://colab.research.google.com/drive/1aQ69T-Q3BfMhu1ZyM2xCXGJo2AswAZHU#scrollTo=fBwIl7rDQscP" target="_blank">Google Colab Project</a>
+            </p>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Project Group Members:</p>
+            <ul class="footer-members">
+                <li>Harsha Rapuru</li>
+                <li>Saher Thekedar</li>
+                <li>Hayley Hawkins</li>
+                <li>Prachi Dudhe</li>
+                <li>Ankita Aswathanarayana</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
