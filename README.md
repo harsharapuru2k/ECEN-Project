@@ -9,7 +9,8 @@ Evaluate the model using the test dataset.
 Generate and display the confusion matrix and classification report.
 
 2. simple_model.pth:
-Pre-trained model file. Ensure this file is present in the same directory as the demo.py script or update the path in the script accordingly.
+Pre-trained model file. Ensure this file is present in the same directory as the demo.py script or update the path(line 28) in the script accordingly.
+Download from this Link: https://drive.google.com/file/d/1Oj8vO-GnoIwwYuB4pmzE7mcBjClrodLZ/view?usp=drive_link
 
 Requirements
 Python 3.7 or later
